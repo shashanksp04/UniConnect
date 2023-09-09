@@ -1,0 +1,36 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #cb6ce6;
+    color: white;
+    padding: 10px 0;
+  }
+  nav logo {
+    text-align: left;
+    height: auto;
+  }
+  
+  nav img {
+    block-size: inline;
+    height: auto;
+  }
+  
+  nav ul {
+    text-align: right;
+    font-size: x-large;
+    list-style-type: none;
+  }
+  
+  nav li {
+    
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+  }

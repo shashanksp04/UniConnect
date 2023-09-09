@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Shashank's Website</title>
+
+    <!-- Meta Tags in HTML-->
+
+    <meta name="description" content="Shashank's website using Bro code">
+    <meta name="Keywords" content="HTML,TUTORIAL,BEGINNERS">
+
+    <!--We can have our webpage scale to device used by user using this-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- we can tell our browser which type of character encoding we are using-->
+    <meta charset="UTF-8">
+
+    <!-- We can set our webpage to automatically refresh after a set time-->
+    <!--<meta http-equiv="refresh" content="3">-->
+
+</head>
+
+<body> <!--style="background-color: aqua;"-->
+    <!-- h1- used for main heading and then h2,h3....-->
+    <!-- hr used for dividing the page into sections 
+    br used for providing break between lines
+    p - used for paragraph -->
+    <h1>MAIN HEADING</h1>
+    <hr> 
+    <h1>SUB HEADING : I'm building my website</h1>
+    <br>
+    <h2>I'm  excited</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ratione amet ex, vitae mollitia velit dignissimos dolor enim totam dicta, non omnis error delectus pariatur quas laboriosam! Eius, sint quam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis, suscipit officia non, blanditiis quaerat accusamus, rerum vel fugiat dolore aperiam nam error enim itaque ad commodi dicta sit ex?</p>
+    
+    <!-- applying hyperlink to text/buttons/images
+    whatever object you want to apply hyperlink to, surround it with "<a"-->
+    
+    <!-- "target" -> this will ensure that a new tab is used for the hyperlink, the default is self -->
+
+    <a href="https://www.google.com" target=_blank  title="This takes you to Google">
+        Google
+    </a>
+
+    <br>
+    <br>
+
+    <!-- suppose you want the link to take you to your another webpage -->
+    <a href="Page2.html" target=_blank  title="This takes you to Page2">
+        This takes you to second page
+    </a>
+
+    <br>
+    <br>
+
+    <!-- we can send mail as well-->
+    <a href="mailto:email_address" target=_blank  title="This opens your outlook">
+        Email me
+    </a>
+
+    <!-- adding image to website-->
+    <br>
+    <br>
+   
+    <!--<img src="/images/Xavier.png" height = "300" width = "200" alt="This is a picture of Xavier" title = "Xavier is Xavxy">-->
+
+    <!-- applying hyperlink to the image-->
+    
+    <a href="https://en.wikipedia.org/wiki/Xavier" target=_blank >
+        <img src="/images/Xavier.png" height = "300" width = "200" alt="This is a picture of Xavier" title = "Xavier is Xavxy">
+    </a>
+
+    <!-- adding audio to webpage-->
+    
+    <br>
+    <br>
+
+    <!-- <audio controls autoplay loop src ="Songs/Meri Zindagi.mp3"></audio>
+     -->
+    <!-- we can also have backup audios incase the browser doesn't support the audio-->
+    <!-- if first audio is not played it will play the succeeding audoio-->
+    <!-- the last message will be displayed incase neither of two audios are played by the browser-->
+    <br>
+    <audio controls autoplay muted loop>
+        <source src="Songs/Mere Soneya.mp3">
+        <source src="Songs/Meri Zindagi.mp3">
+        This browser doesn't support these files
+    </audio>
+    
+    <br>
+    <br>
+
+    <!-- adding the video to the webpage-->
+
+    <video controls autoplayloop src="Video/Tu Aa ke Dekhle.mp4" width = 500>
+        <source src="Video/Tu Aa ke Dekhle.mp4">
+        This browser doesn't support the file
+    </video>
+
+    <br>
+    <br>
+
+    <!-- text formatting  tags-->
+
+    <p> This is normal text </p>
+    
+    <p> This is <b>bold</b> text </p>
+
+    <p> This is <i>italics</i> text </p>
+
+    <p> This is <big>Big</big> text </p>
+
+    <p> This is <small>small</small> text </p>
+    
+    <p> This is <sub>subscript</sub> text </p>
+
+    <p> This is <super>superscript</super> text </p>
+
+    <p> This is <ins>inserted</ins> text </p>
+
+    <p> This is <del>deleted</del> text </p>
+
+    <p> This is <mark>marked</mark> text </p>
+
+    <br>
+    <br>
+
+    <!-- creating lists in HTML
+    There are mainly three types Unordered, Ordered, Description-->
+    
+    <h3>Unordered List</h3>
+    <ul>
+        <li>pizza dough</li>
+        <li>sauce</li>
+        <li>cheese</li> <!-- creating nested list-->
+        <li>toppings
+            <ul>
+                <li>Pepperoni</li>
+                <li>Mushrooms</li>
+            </ul>
+        </li> 
+
+
+    </ul>
+    
+    <br>
+    <br>
+
+    <h3>Ordered List</h3>
+    <ol type="A">   <!-- we can change the types of the list-->
+        <li>eat breakfast</li>
+        <li>take shower</li>
+        <li>leave for work</li>
+    </ol>
+    
+    <br>
+    <br>
+
+    <h3>Discription List</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>This adds structure to a webpage</dd>
+
+        <dt>CSS</dt>
+        <dd>This adds style to a webpage</dd>
+
+        <dt>JavaScript</dt>
+        <dd>This adds functionality to a webpage</dd>
+    </dl>
+
+    <br>
+    <br>
+    
+    <!-- creating tables in HTML
+    tr used for creating row, th is used for heading, td is used for the data-->
+
+    <h3>Store hours</h3>
+
+    <table bgcolor="black" width="700">
+        <tr bgcolor="grey">
+            <th width="100">Sunday</th>
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thursday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+        </tr>
+        <tr bgcolor="lightgrey" align="center">
+            <td>Closed</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    
+
+    <!-- adding color to webpage-->
+    <!-- you can use color picker-->
+
+    <h5 style="color: blueviolet;">hello</h5>
+    <h5 style="color: rgb(5,200,230)">hello</h5>
+    <h5 style="color: #28f005">hello</h5>
+
+    <p style="background-color: bisque;color: blue;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cupiditate sint natus et? Blanditiis commodi cupiditate quisquam aliquid corporis, 
+       minus ab quasi voluptatum quod perspiciatis repellendus, voluptate facere quibusdam earum.</p>
+    
+    <!-- using span and div-->
+    <!-- span = adds markup to text or portion of document-->
+    <!-- div = defines a division of document-->
+    
+    <h3>Hello!</h3>
+    <p>Lorem <span style="color:aquamarine">ipsum dolor sit amet consectetur, adipisicing elit. Iure pariatur 
+       voluptatum </span> minus quia quam voluptates impedit eos repudiandae iste 
+       numquam cupiditate officia quasi esse ab nesciunt quo, ipsum laudantium ex.
+    </p>
+    
+    <div style="background-color: #444444;"
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure pariatur 
+        voluptatum minus quia quam voluptates impedit eos repudiandae iste 
+        numquam cupiditate officia quasi esse ab nesciunt quo, ipsum laudantium ex.
+     </p>
+
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure pariatur 
+        voluptatum minus quia quam voluptates impedit eos repudiandae iste 
+        numquam cupiditate officia quasi esse ab nesciunt quo, ipsum laudantium ex.
+     </p>
+
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure pariatur 
+        voluptatum minus quia quam voluptates impedit eos repudiandae iste 
+        numquam cupiditate officia quasi esse ab nesciunt quo, ipsum laudantium ex.
+     </p>
+     </div>
+
+    <br>
+    <br>
+
+    <!-- Iframe = embed content from another source into an HTML document
+     example used for ads, used in many hacking techniques-->
+    
+    <iframe src="adv.html" width="700" height="100"></iframe>
+
+    <!-- creating buttons in HTML-->
+    
+    <br>
+    <br>
+
+    <a href="https://www.google.com">
+        <button style="background-color: aquamarine;color: #444444;border-radius: 5px;">click me
+        </button>
+
+    </a>
+
+    <br>
+    <br>
+
+    <button onclick="doSomething()"style="background-color: aquamarine;color: #444444;border-radius: 5px;">click me
+    </button>
+
+    <p id="test">Hello</p>
+    
+    <script>
+        function doSomething(){
+            document.getElementById("test").innerHTML="GoodBye";
+        }
+    </script>
+
+    <!--FORMS IN HTML-->
+    <!-- don't use "GET" if u want to save some private information, it is generally used for things like square boxes-->
+    <!-- Always better to use POST for saving private information-->
+    <!-- use of required keywords will force the user to enter a value-->
+
+    <form>  <!-- action="action_page.php" method="POST"> -->
+        
+        <div>
+        
+           <label for="title">title:</label>
+           <label>Mr.</label>
+           <input type="radio" id="Mr" name ="title" value="Mr.">
+
+           <label>Mrs.</label>
+           <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+           <label>PhD.</label>
+           <input type="radio" id="PhD." name="title" value="PhD.">
+        </div>
+
+        <div>
+            <label for="fname">first name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Spongebob" required>
+        </div>
+
+        <br>
+        
+        <div>
+            <label for="lname">last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Squarepants">
+        </div>
+           
+        <br>
+
+        <div>
+            <label for="pass">password:</label>
+            <input type="password" id="pass" name="pass" max="12" required>
+        </div>
+       
+       <br>
+
+        <div>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" placeholder="Spants@gmail.com" >
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="phone">phone:</label>
+            <input type="phone" id="phone" name="phone" placeholder="(123)456789">
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="bdate">birth_date:</label>
+            <input type="bdate" id="birthdate" name="bdate" placeholder="MM/DD/YYYY"> 
+        </div>
+
+        <br>
+
+        <div>
+            <label for="quantity">quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" default="1">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="payment">payment:</label>
+            <select id="payment" name="payment">
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="giftcards">giftcards</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="subscribe">subscribe:</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+        </div>
+
+        <br>
+
+        <div>
+            <input type="reset">
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit">
+        </div>
+
+        <br>
+
+
+    </form>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Rate Us</h1>
+    </header>
+    <main>
+        <form id="ratingForm">
+            <h2>Rate how crowded:</h2>
+            <div class="rating">
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star5">Very Crowded</label><img src="../Pictures/Index/crowded.jpeg" style="margin-left: 650px;">
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star4">Medium Crowded</label><img src="../Pictures/Index/mediumCrowd.avif" style="margin-left: 650px;">
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star3">Not much Crowded</label><img src="../Pictures/Index/notmuchCrowded.avif" style="margin-left: 650px;">
+            </div>
+            <div class="feedback">
+                <label for="userFeedback">Tell us more:</label>
+                <textarea id="userFeedback" name="userFeedback" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2023 Your Company
+    </footer>
+</body>
+</html>

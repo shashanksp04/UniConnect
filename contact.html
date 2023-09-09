@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn Apps.png">
+</head>
+<body>
+    <header>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <!--<li><a href="#">Services</a></li>-->
+              <li><a href="contact.html">Contact</a></li>
+              <li class="dropdown" style="margin-left: -17px;">
+                <button class="dropbtn" style="font-size: x-large;">Account</button>
+                <div class="dropdown-content">
+                    <a href="invite.html">Invite Friends</a>
+                    <a href="signup.html">Create Account</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </li>
+          </ul>
+      </nav>
+    </header>
+    <div class="container">
+        <form action="action_page.php">
+          
+          <div class="imgcontainer">
+            <img src="Pictures/Index/LOGO.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="usa">USA</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">India</option>
+              <option value="usa">United Kingdom</option>
+              <option value="usa">France</option>
+              <option value="usa">United Arab Emirates</option>
+            </select>
+      
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

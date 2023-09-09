@@ -1,0 +1,63 @@
+#BOX6{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    text-align: center;
+    font-size: 225px;
+    
+    /*
+    animation: mySlide;
+    animation-play-state: running;
+    animation-iteration-count: 4;
+    animation-delay: 0s;
+    animation-timing-function: ease;  accelerates and deaccelerates 
+    animation-duration: 5s;
+    */
+
+    /* We can implement the above six at once using this syntax 
+    where 5s is duration, linear is timing-function, 0s is delay
+    4 is iteration count, running is play-state and mySlide is the name */
+
+    animation: 3s linear 0s 4 running myColorChange;
+}
+
+/*
+Using pseudo class to implement animation
+#BOX6:hover{
+    animation: 5s linear 0s 4 running mySlide;
+}
+#BOX6:active{
+    animation: 3s linear 0s 4 running mySlide;
+}
+*/
+
+
+
+@keyframes mySlide {
+    from{margin-left: 0%;}
+    to{margin-left: 100%;}
+}
+
+@keyframes myRotate {
+    100%{transform: rotateX(360deg)}
+    /*100%{transform: rotateY(360deg)}*/
+}
+
+@keyframes myOpacity {
+    50%{opacity: 0;}
+    
+}
+
+@keyframes myScale {
+    50%{transform: scale(0.5,0.5);}
+    
+}
+
+@keyframes myColorChange {
+    0%{background-color: burlywood;}
+    20%{background-color: brown;}
+    40%{background-color: blueviolet;}
+    60%{background-color: blue;}
+    80%{background-color: greenyellow;}
+    100%{background-color: orange;}
+}
