@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rate Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="main.css">
+    
+    <title>UniConnect</title>
+    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn Apps.png">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <h1>Rate Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!--ADD HOVER ELEMENT THROUGH CSS -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown" style="margin-left: -13px;">
+                    <button class="dropbtn" style="font-size: x-large;">Account</button>
+                    <div class="dropdown-content">
+                        <a href="invite.html">Invite Friends</a>
+                        <a href="signup.html">Create Account</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <form id="ratingForm">
-            <h2>Rate how crowded:</h2>
-            <div class="rating">
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star5">Very Crowded</label><img src="../Pictures/Index/crowded.jpeg" style="margin-left: 650px;">
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star4">Medium Crowded</label><img src="../Pictures/Index/mediumCrowd.avif" style="margin-left: 650px;">
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star3">Not much Crowded</label><img src="../Pictures/Index/notmuchCrowded.avif" style="margin-left: 650px;">
-            </div>
-            <div class="feedback">
-                <label for="userFeedback">Tell us more:</label>
-                <textarea id="userFeedback" name="userFeedback" rows="4"></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-    <footer>
-        &copy; 2023 Your Company
-    </footer>
+<main>
+<form action="/action_page.php">
+  <p>Rate How Crowded is Eppley:</p>
+  <input type="radio" id="star3" name="fav_language" value="3">
+  <label for="star1">Very Crowded</label><br>
+  <input type="radio" id="star2" name="fav_language" value="2">
+  <label for="star2">Medium Crowded</label><br>
+  <input type="radio" id="star1" name="fav_language" value="1">
+  <label for="star1">Not Many People</label><br>
+  <input type="submit" value="Submit"><br>
+</form>
+</main>
+<footer>
+    <p>&copy; 2023 </p>
+</footer>
+
 </body>
 </html>
