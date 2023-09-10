@@ -21,17 +21,6 @@
             position: sticky;
         }
 
-        .jsonArea {
-            position: relative;
-            overflow: auto;
-            display: inline-block;
-            width: 400px;
-            height: 200px;
-            background-color: #eeeeee;
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.1);
-        }
-
         .dropbtn {
             font-size: x-large;
             background-color: transparent;
@@ -95,7 +84,7 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border: 1px solid #ccc;
             border-radius: 10px;
             margin-top: 20px;
@@ -174,11 +163,31 @@
     </div>
     </div>
     <div class="main-container">
-        <form action="/action_page.php">
+        <form id="search">
             <label for="gsearch">Search Storage Around You:</label>
             <input type="search" id="gsearch" name="gsearch">
-            <input type="submit" value="Search">
+            <input type="submit" onclick=func() value="Search">
         </form>
+
+        <script>
+            function func(){
+                searched = document.innerHTML('gsearch');
+                fetch('http://localhost:5000/storage/getSpec',{method:'GET',headers:{'title':searched}}.then(res => { return res.json() }).then(
+                    data => data.forEach(
+                        user => {
+                                document.getElementById('title').innerHTML = user.Property_Name;
+                                document.getElementById('area').innerHTML = user.Area;
+                                document.getElementById('price').innerHTML = user.PricePerMonth;
+                                document.getElementById('sd').innerHTML = new Date(user.startTime);
+                                document.getElementById('ed').innerHTML = new Date(user.endTime);
+                                console.log(user.Area);
+                                console.log(user.price);
+                                if(!(data[i++]==null)){ 
+                                addDiv();
+                                }
+                        })))
+            }
+        </script>
 
         <h2>STORAGE CATALOG</h2>
 
@@ -224,23 +233,7 @@
                     <td id="ed"></td>
                 </tr>
             </table>
-            <table>
-                <tr>
-                    <th>Members</th>
-                </tr>
-                <tr>
-                    <td>Person 1</td>
-                </tr>
-                <tr>
-                    <td>Person 2</td>
-                </tr>
-                <tr>
-                    <td>Person 3</td>
-                </tr>
-                <tr>
-                    <td>Person 4</td>
-                </tr>
-            </table>
+            
             <p><button><a href="view.html">View this storage!</a></button></p>
         </div>
         
