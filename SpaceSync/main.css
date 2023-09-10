@@ -1,0 +1,151 @@
+.header-container {
+  display: flex; /* Make the container a flex container */
+  align-items: center; /* Vertically center items within the container */
+  width: 100%; /* Ensure the container takes the full width available */
+}
+
+/* Optionally, add some spacing between the logo and header */
+.header-container > div {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+
+header {
+    background-color: #cb6ce6;
+    color: white;
+    padding: 10px 0;
+  }
+  nav logo {
+    text-align: left;
+    height: auto;
+  }
+  
+  nav img {
+    block-size: inline;
+    height: auto;
+  }
+  
+  nav ul  {
+    text-align: right;
+    font-size: x-large;
+    list-style-type: none;
+  }
+  
+  nav li {
+    
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+  }
+       
+       
+  .dropbtn {
+    background-color: #cb6ce6;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.main{
+  width: auto;
+  height: 1000px;
+}
+
+.row{
+  position: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    display: flex;
+  }
+  
+.price {
+    color: grey;
+    font-size: 22px;
+  }
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+.card button:hover {
+    opacity: 0.7;
+  }
+
+
+  .scroll {
+      margin-left: 40px;
+      margin-bottom: 40px;
+      width: 100%;
+      overflow-x: auto; /* Add horizontal scrollbar when needed */
+      white-space: nowrap; /* Prevent content from wrapping */
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start; /* Adjust alignment as needed */
+}
+
+
+.text-center {
+    /* Adjusting max-width to allow visibility for single div */
+    max-width: 100%;
+    /* Use a percentage of the available space */
+    height: auto;
+    /* Set a fixed height */
+    width: auto;
+    /* Allow width to be determined by content */
+    margin: 3px;
+    /* Additional styles for spacing and alignment */
+    padding: 10px;
+    /* Add padding for spacing */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+  
+

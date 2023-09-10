@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Button with Font Awesome Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome CSS -->
+    <style>
+        /* Basic styling for the share button */
+        .share-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .share-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the share icons container */
+        .share-icons {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Styling for social media icons */
+        .social-icon {
+            display: inline-block;
+            font-size: 24px; /* Adjust the size as needed */
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="share-button" id="shareButton">Share</button>
+    <div class="share-icons" id="shareIcons">
+        <i class="fab fa-facebook social-icon" title="Share on Facebook" onclick="shareOnFacebook()"></i>
+        <i class="fab fa-twitter social-icon" title="Share on Twitter" onclick="shareOnTwitter()"></i>
+        <i class="fab fa-linkedin social-icon" title="Share on LinkedIn" onclick="shareOnLinkedIn()"></i>
+        <!-- Add more Font Awesome icons and their links as needed -->
+    </div>
+    
+    <script>
+        const shareButton = document.getElementById('shareButton');
+        const shareIcons = document.getElementById('shareIcons');
+
+        // Function to toggle the visibility of share icons
+        function toggleShareIcons() {
+            if (shareIcons.style.display === 'block') {
+                shareIcons.style.display = 'none';
+            } else {
+                shareIcons.style.display = 'block';
+            }
+        }
+
+        // Function to share on Facebook
+        function shareOnFacebook() {
+            const shareUrl = 'https://example.com'; // Replace with the actual URL you want to share
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+        }
+
+        // Function to share on Twitter
+        function shareOnTwitter() {
+            const shareUrl = 'https://example.com'; // Replace with the actual URL you want to share
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}`, '_blank');
+        }
+
+        // Function to share on LinkedIn
+        function shareOnLinkedIn() {
+            const shareUrl = 'https://example.com'; // Replace with the actual URL you want to share
+            window.open(`https://www.linkedin.com/shareArticle?url=${encodeURIComponent(shareUrl)}`, '_blank');
+        }
+
+        shareButton.addEventListener('click', toggleShareIcons);
+    </script>
+</body>
+</html>

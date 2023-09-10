@@ -1,41 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
-    <title>UniConnect</title>
-    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn Apps.png">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/Pictures/Index/PennApps.png">
+    <title>SpaceSync</title>
+    <style>
+        .scrolls {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            height: 80px;
+            white-space:nowrap;
+        }
+
+        .buttonsGroup {
+            position: sticky;
+        }
+
+        .jsonArea {
+            position: relative;
+            overflow: auto;
+            display: inline-block;
+            width: 400px;
+            height: 200px;
+            background-color: #eeeeee;
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropbtn {
+            font-size: x-large;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .main-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="search"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .storage-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #fff;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> <!--ADD HOVER ELEMENT THROUGH CSS -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <button class="dropbtn" style="font-size: x-large;">Account</button>
-                    <div class="dropdown-content">
-                      <a href="#">Invite Friends</a>
-                      <a href="#">Create Account</a>
-                      <a href="#">Login</a>
-                    </div>
-                  </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div class="header-container">
+        <div style="width: 140px; height: 100px;">
+            <a href="../index.html" class="logo"><img src="/Pictures/Index/MLOGO.png" alt="Your Logo"
+                    style="width: 160px; height: 100px;"></a>
+        </div>
+        <header style="height:100px; width: 1400px;">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn" style="font-size: x-large;">Account</button>
+                        <div class="dropdown-content">
+                            <a href="../invite.html">Invite Friends</a>
+                            <a href="../signup.html">Create Account</a>
+                            <a href="../login.html">Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    </div>
+    <div class="main-container">
         <form action="/action_page.php">
-          <label for="gsearch">Search Storage Around You:</label>
-          <input type="search" id="gsearch" name="gsearch">
-          <input type="submit">
+            <label for="gsearch">Search Storage Around You:</label>
+            <input type="search" id="gsearch" name="gsearch">
+            <input type="submit" value="Search">
         </form>
-    </main>
+
+        <h2>STORAGE CATALOG</h2>
+
+        
+        <button  onclick="addDiv()">Add More</button>
+        <script>
+            var i=1;
+
+            fetch('http://localhost:5000/storage/get').
+                then(res => { return res.json() }).then(
+                    data => data.forEach(
+                        user => {
+                                document.getElementById('title').innerHTML = user.Property_Name;
+                                document.getElementById('area').innerHTML = user.Area;
+                                document.getElementById('price').innerHTML = user.PricePerMonth;
+                                document.getElementById('sd').innerHTML = new Date(user.startTime);
+                                document.getElementById('ed').innerHTML = new Date(user.endTime);
+                                console.log(user.Area);
+                                console.log(user.price);
+                                if(!(data[i++]==null)){ 
+                                addDiv();
+                                }
+                        }));    
+        </script>
+        <div class="card">
+            <img src="../Pictures/Index/HOUSE.webp" alt="Storage Image" class="storage-image">
+            <h3 id="title"></h3>
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <td id="area"></td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td id="price"></td>
+                </tr>
+                <tr>
+                    <th>Start Date</th>
+                    <td id="sd"></td>
+                </tr>
+                <tr>
+                    <th>End Date</th>
+                    <td id="ed"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Members</th>
+                </tr>
+                <tr>
+                    <td>Person 1</td>
+                </tr>
+                <tr>
+                    <td>Person 2</td>
+                </tr>
+                <tr>
+                    <td>Person 3</td>
+                </tr>
+                <tr>
+                    <td>Person 4</td>
+                </tr>
+            </table>
+            <p><button><a href="view.html">View this storage!</a></button></p>
+        </div>
+        
+
+    </div>
     <footer>
-        <p>&copy; 2023 </p>
+        <p>&copy; 2023 SpaceSync</p>
     </footer>
 </body>
+
+
+<script>
+    function addDiv() {
+        let customDiv = document.querySelector('.card');
+        let clone = customDiv.cloneNode(true);
+        let scroll = document.querySelector('.main-container');
+        scroll.appendChild(clone);
+    }
+</script>
+
 </html>

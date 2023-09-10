@@ -5,33 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <title>ME</title>
-    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn Apps.png">
+    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn_Apps.png">
 </head>
 <body>
+  <style>
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+    
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    
+    @-webkit-keyframes fadein {
+      from {bottom: 0; opacity: 0;} 
+      to {bottom: 30px; opacity: 1;}
+    }
+    
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 30px; opacity: 1;}
+    }
+    
+    @-webkit-keyframes fadeout {
+      from {bottom: 30px; opacity: 1;} 
+      to {bottom: 0; opacity: 0;}
+    }
+    
+    @keyframes fadeout {
+      from {bottom: 30px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
+  </style>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Me</a></li>
             </ul>
         </nav>
     </header>
-    <form action="action_page.php" method="post">
+    <form action="http://localhost:5000/auth/login" method="post">
         <div class="imgcontainer">
           <img src="Pictures/Index/LOGO.png" alt="Avatar" class="avatar">
         </div>
       
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+        <div class="container"> 
+          <label for="uname">
+            <b>Username</b>
+          </label>
+          <input type="text" placeholder="Enter Username" name="name" required>
+
+          <label for="psw">
+            <b>Password</b>
+          </label>
+          <input type="password" placeholder="Enter Password" name="password" required>
       
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button type="submit">Login</button>
+          <button type="submit" onclick=>Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
@@ -39,7 +84,10 @@
       
         <div class="container" style="background-color:#f1f1f1">
           <a href="index.html"><button type="button" class="cancelbtn">Cancel</button></a>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <span class="psw"><a href="/forgot.html">Forgot password?</a></span><br>
+          <p style="text-align: center;">Don't have an account?</p>
+          <br>
+          <p style="text-align: center;"><a style="text-align: center;" href="signup.html">Create new account</a></p>
         </div>
       </form>
 </body>

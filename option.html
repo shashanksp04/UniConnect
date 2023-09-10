@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button Example</title>
+    <script>
+        function handleSubmit() {
+            // Get the selected radio button's value
+            var radioButtons = document.getElementsByName('option');
+            var selectedValue = '';
+
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    selectedValue = radioButtons[i].value;
+                    break;
+                }
+            }
+
+            // Redirect based on the selected value
+            if (selectedValue === 'user') {
+                window.location.href = '/SpaceSync/main.html';
+            } else if (selectedValue === 'owner') {
+                window.location.href = '/SpaceSync/owner.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>
+            <input type="radio" name="option" value="user"> user
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="owner"> owner
+        </label><br>
+        <input type="button" value="Submit" onclick="handleSubmit()">
+    </form>
+</body>
+</html>

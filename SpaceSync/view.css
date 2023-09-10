@@ -1,0 +1,110 @@
+.header-container {
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Vertically center items within the container */
+    width: 100%; /* Ensure the container takes the full width available */
+  }
+  
+  /* Optionally, add some spacing between the logo and header */
+  .header-container > div {
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  
+  header {
+      background-color: #cb6ce6;
+      color: white;
+      padding: 10px 0;
+    }
+    nav logo {
+      text-align: left;
+      height: auto;
+    }
+    
+    nav img {
+      block-size: inline;
+      height: auto;
+    }
+    
+    nav ul  {
+      text-align: right;
+      font-size: x-large;
+      list-style-type: none;
+    }
+    
+    nav li {
+      
+      display: inline;
+      margin-right: 15px;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+    }
+         
+         
+    .dropbtn {
+      background-color: #cb6ce6;
+      color: white;
+      font-size: 16px;
+      border: none;
+      margin-top: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      font-family: arial;
+    }
+    .card col-md-4-3{
+        margin-right: 20px;
+        margin-left: 50px;
+        width: 250px;
+        height: 250px;
+    }
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+    
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    .card button:hover {
+      opacity: 0.7;
+    }

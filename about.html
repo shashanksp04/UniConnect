@@ -1,24 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
-    <title>About</title>
-    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn Apps.png">
+    <title>UniConnect</title>
+    <link rel="icon" type="image/x-icon" href="/Pictures/Index/Penn_Apps.png">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <header>
-        <nav>
+    
+    <div class="header-container">
+        <div style="width: 140px; height: 100px;">
+            <a href="index.html" class="logo"><img src="Pictures/Index/MLOGO.png" alt="Your Logo" style="width: 160px; height: 100px;"></a>
+        </div>
+        <header style="height:100px; width: 1400px;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn" style="font-size: x-large;">Account</button>
+                        <div class="dropdown-content">
+                            <a href="invite.html">Invite Friends</a>
+                            <a href="signup.html">Create Account</a>
+                            <a href="login.html">Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>    
+    <main>
+        <div class="about">
+            <h1>About Us</h1>
+            <p>Welcome to <span class="website-name"><em>UniConnect</em></span>! We are passionate about facilitating a seamless college experience for students. Our journey began as a solution for freshmen, aiming to ease their transition into university life. </p>
+        </div>
+    
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission at <span class="website-name"><em><strong>UniConnect</strong></em></span> is to empower university students by providing essential resources and fostering a supportive community. We believe that every student deserves a smooth and enriching college experience. We are committed to achieving this by offering real-time space information, facilitating storage solutions, and connecting students with valuable work opportunities.</p>
+        </div>
+    
+        <div class="offerings">
+            <h2>What We Offer</h2>
+            <p><span class="website-name"><em><strong>UniConnect</strong></em></span> offers an array of valuable resources and services tailored to the needs of university students. Whether you're a freshman seeking a smooth transition, an international student in need of storage solutions, or a student looking for part-time job opportunities, we have something for everyone. Our platform is designed to simplify campus life, foster connections, and provide opportunities for personal and academic growth.</p>
+        </div>
+    
+        <div class="why-choose">
+            <h2>Why Choose Us</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <!--<li><a href="#"></a></li>-->
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="profile.html">Me</a></li>
+                <li><strong>Expertise:</strong> Our team consists of dedicated university students with a deep understanding of university life. We're committed to providing you with the best resources and services tailored to your needs.</li>
+                <li><strong>Quality:</strong> Quality is at the heart of everything we do. Our offerings, from real-time space information to storage solutions and job opportunities, are designed to meet the highest standards, ensuring your satisfaction.</li>
+                <li><strong>Student-Centric:</strong> Student's happiness and success are our primary concerns. We highly value their feedback and continuously work to enhance and improve our platform to better serve you.</li>
             </ul>
-        </nav>
-    </header>
-    <p>Owned by Mahendra Solanki.</p>
+        </div>
+    
+        <div class="team">
+            <h2>Meet the Team</h2>
+            <!-- Add team members' photos and bios here -->
+            <ul>
+                <li><strong>Mahendra Kumar</strong> A highly skilled and organized individual with extensive experience in Information Technology and a passion for education.</li>
+                <li><strong>Shashank P Singh</strong> Shashank, an active listener, excels in both independent and collaborative work, fostering creative solutions as a strong team-player.</li>
+                <li><strong>Mridul Purkayastha</strong> Tech enthusiast having hands-on experience in API development and content creation,</li>
+            </ul>
+        </div>
+    
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? We'd love to hear from you! Reach out to us by visiting our <a href="contact.html">Contact Us</a> page for more options.</p>
+        </div>
+    </main>
+        <footer>
+            <p>&copy; 2023 <span class="website-name">Your Website Name</span>. All rights reserved.</p>
+        </footer>
 </body>
+
 </html>

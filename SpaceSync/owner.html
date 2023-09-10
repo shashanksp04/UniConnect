@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .file-item input[type="file"] {
+            flex: 1;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function addFileInput() {
+            var fileInputContainer = document.getElementById('file-input-container');
+            var newFileInput = document.createElement('div');
+            newFileInput.className = 'file-item';
+            
+            var fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.name = 'file[]';
+            fileInput.accept = 'image/*';
+            fileInput.required = true;
+
+            var deleteButton = document.createElement('input');
+            deleteButton.type = 'button';
+            deleteButton.value = 'Delete';
+            deleteButton.onclick = function() {
+                fileInputContainer.removeChild(newFileInput);
+            };
+
+            newFileInput.appendChild(fileInput);
+            newFileInput.appendChild(deleteButton);
+
+            fileInputContainer.appendChild(newFileInput);
+        }
+    </script>
+</head>
+<body>
+    <h1>Contact Information</h1>
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name:</label>
+            <input type="text" placeholder="John" name="fname" required><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="xyz@gmail.com" required><br>
+            <label for="phoneNo">Phone No:</label>
+            <input type="text" id="phoneNo" name="phoneNo" placeholder="+x(xxx)-xxx-xxxx" required><br>
+            <label for="address1">Address1:</label>
+            <input type="text" id="address1" name="address1" placeholder="Plata Drive, 5119 Plata Apartmennt" required><br>
+            <label for="address2">Address2:</label>
+            <input type="text" id="address2" name="address2" placeholder="College Park, MD 20742" required><br>
+            <label for="storageSize">Storage Size:</label>
+            <input type="text" id="storageSize" name="storageSize" placeholder="10x30" required><br>
+            <label for="price">Monthly Cost:</label>
+            <input type="text" id="price" name="price" placeholder="$120" required><br>
+            <label for="availability1">Availability From:</label>
+            <input type="date" id="availability1" name="availability1" placeholder="09/05/2023" required>
+            <label for="availability2">Availability To:</label>
+            <input type="date" id="availability2" name="availability2" placeholder="09/08/2023" required><br>
+        </form><br>
+        <form method="POST" action="process.php" enctype="multipart/form-data">
+            <div id="file-input-container">
+                <div class="file-item">
+                    <label>Upload Storage Pics:</label>
+                    <input type="file" name="file[]" accept="image/*" required>
+                </div>
+            </div>
+            <input type="button" value="Add More Pics" onclick="addFileInput()">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
